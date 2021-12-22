@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: ReplicaSet                    
+metadata:
+  name: hrishi-sample-app-replica
+spec:
+  replicas: 3
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values:
+          - nodejs
+  template:                         
+    metadata:                       
+      name: hrishi-sample-app
+      labels:                       
+        app: nodejs
+    spec:
+      containers:
+        - image: sample-app:0.1
+          name: healthy-hsa
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /
+
+    
