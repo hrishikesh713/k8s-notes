@@ -48,7 +48,7 @@
 * [understanding ip addresses](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking)
 * [deep dive into linux namespaces](http://ifeanyi.co/)
 
-## Kubectl commands
+## Kubectl commands 
 
 * `kubectl explain pods` - docs about pods
 * `kubectl explain pods.spec` - docs about spec part of pod
